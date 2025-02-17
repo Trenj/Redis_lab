@@ -1,0 +1,30 @@
+Добавление пользователей:
+
+HSET user:1 name "Alex" login "alex"
+HSET user:2 name "Maria" login "maria"
+HSET user:3 name "John" login "john"
+HSET user:4 name "Olga" login "olga"
+HSET user:5 name "Sergey" login "sergey"
+
+
+Добавление id друзей пользователей:
+
+SADD user:1:friends 2 3
+SADD user:2:friends 1 4
+SADD user:3:friends 1 5
+SADD user:4:friends 2 5
+SADD user:5:friends 3 4
+
+
+Добавление сообщений пользователей:
+
+HSET message:1 user_id 1 text "Hello, world!"
+HSET message:2 user_id 2 text "How are you?"
+HSET message:3 user_id 3 text "Great weather today!"
+HSET message:4 user_id 4 text "Working on a project."
+HSET message:5 user_id 5 text "Reading a book."
+HSET message:6 user_id 1 text "Who's up for a movie?"
+HSET message:7 user_id 2 text "New update released!"
+HSET message:8 user_id 3 text "Have a nice day, everyone!"
+HSET message:9 user_id 4 text "Coffee is the best start of the day."
+HSET message:10 user_id 5 text "Learning Redis!"
